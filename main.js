@@ -62,7 +62,7 @@ document.querySelector('.fech_num'+i+'').style.pointerEvents = "none";
 //  		i+'</span></li>';
 
 function fech_val(value){
-	for (var i =1; i <32; i++) {'active_'+i+''
+	for (var i =1; i <32; i++) {
 		if (value==i) {
 document.getElementById('active_'+i+'').classList.remove("active");
 document.getElementById("task").disabled=false;
@@ -81,4 +81,4 @@ function setFech_val(value){
 function getFech_val(){
 	return val_fech;
 }
-}
+
