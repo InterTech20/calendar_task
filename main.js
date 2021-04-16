@@ -22,6 +22,7 @@ btn_task.addEventListener("click",function(){
 
 for (var i = 1; i <32; i++) {
 	document.getElementById('active_'+i+'').classList.add("active");
+	document.querySelector('.fech_num'+i+'').style.pointerEvents = "auto";
 }
 
 
@@ -51,7 +52,7 @@ window.addEventListener("load", function () {
  		document.querySelector('.days').
  		innerHTML+='<li class="fech_num'+i+'" onclick="fech_val('+i+')"><span id="active_'+i+'">'+
  		i+'</span></li>';
-
+document.querySelector('.fech_num'+i+'').style.pointerEvents = "none";
  	}
      
 });
@@ -79,4 +80,5 @@ function setFech_val(value){
 
 function getFech_val(){
 	return val_fech;
+}
 }
