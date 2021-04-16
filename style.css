@@ -110,6 +110,11 @@ body {
   color: white;
   border-radius:50%;
   cursor: pointer;
+  transition: 2s;
+  
+}
+.active:hover{
+	box-shadow: 1px 0 6px rgba(0,0,.2);
 }
 
 .task_title{
@@ -179,45 +184,68 @@ body {
 	padding: 10px;
 	border-radius:10px;
 }
+
+
+.from{
+	
+	position: absolute;
+	/* background: #1abc9c;   */
+	display: flex;
+	width: 320px;
+	height: 170px; 
+	top: 70%;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.from_task_note,.from_task{
+	margin: 20px;
+	outline: none;
+	border:2px solid var(--primary);
+	padding: 20px;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: bold;
+	border-radius: 15px;
+	margin-top: 95px;
+	transition: 2s;
+}
+
+.input_translate_initial{
+	transform: translateX(550px); 	
+}
+
+.input_translate_fin{
+	/* transform: translateX(-250px);  */
+transform: translateX(0px);
+}
+
 .btn_{
+	position: absolute;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: var(--primary);
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 	border-radius: 50%;
 	font-size: 22px;
 	color: white;
-	transition: 1s;
-	margin: 5px;
+	transition: 2s;
+	/* margin: 5px; */
+	margin-top: 90px;
+	margin-left: 120px;
+	z-index: 999;
 }
+
 .btn_:hover{
 	cursor: pointer;
 	background: var(--secon);
-
+	box-shadow: 1px 1px 6px rgba(0,0,.2);
 }
 
-
-.from{
-	position: absolute;
-	display: flex;
-	top: 70%;
+.btn_translate{
+	transform: translateX(380px);	
 }
-.from_task_note,.from_task{
-margin: 10px;
-outline: none;
-border:2px solid var(--primary);
-padding: 10px;
-text-align: center;
-text-transform: capitalize;
-font-weight: bold;
-border-radius: 15px;
-}
-
-/*.fa-tasks{
-	font-size: 22px;
-	color: white;
-}*/
 
 
