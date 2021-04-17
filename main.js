@@ -26,14 +26,13 @@ function pulsar_note(e) {
 }
 
 function task_option(){
-	if (cont==0) {
-		// <i class="fas fa-times"></i>
+	if (cont==0) {console.log("-2 ->"+vue++);
 	document.querySelector('.task_menu').classList.remove('fa-ellipsis-h');
 	document.querySelector('.task_menu').classList.add('fa-times');
 	document.querySelector('.task_option_del').style.display="block";
 	document.querySelector('.task_option_edit').style.display="block";
 	cont = 1;
-	}else{
+	}else{console.log("-3 ->"+vue++);
 	document.querySelector('.task_option_del').style.display="none";
 	document.querySelector('.task_option_edit').style.display="none";
 	document.querySelector('.task_menu').classList.remove('fa-times');
@@ -137,8 +136,9 @@ function add_task(task){
 
 	let date = new Date();
 	document.querySelector('.task_container').innerHTML+= `
-	${create_Task_menu()}
+	
 	<div class="task">
+	${create_Task_menu()}
 			<div class="task_item1"> ${task}<span>
 			${date.getHours()+":"+date.getMinutes()}</span></div>
 			<div class="task_item2">${getFech_val()} <span>mon</span></div>
@@ -150,14 +150,17 @@ function add_task(task){
 function add_note(note){
 
 	document.querySelector('.task_container').innerHTML+= `
-	${create_Task_menu()}
+	
 	<div class="task">
+	${create_Task_menu()}
 			<div class="task_item3">${note}</div>
 		</div>`;
 
 }
-
+	let vue=0;
 function create_Task_menu(){
+	console.log("-1 ->"+vue++);
+	//${vue++}
 	return `<div class="task_option">
 				<span class="task_option_menu" onclick="task_option()">
 					<i class="fas task_menu  fa-ellipsis-h"></i>
@@ -169,6 +172,7 @@ function create_Task_menu(){
 					<i class="fas fa-pen"></i>
 				</span>
 			</div>`;
+		
 }
 
 window.addEventListener("load", function () {
@@ -218,6 +222,5 @@ function input_disabled(band){
 		document.getElementById("task").value='';
 		document.getElementById("note").value='';
 }
-
 
 
