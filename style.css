@@ -116,6 +116,15 @@ body {
 .active:hover{
 	box-shadow: 1px 0 6px rgba(0,0,.2);
 }
+.active_fech {
+  padding: 5px;
+  background: var(--primary);
+  color: white;
+  border-radius:50%;
+  cursor: pointer;
+  transition: 2s;
+  
+}
 
 .task_title{
 	font-family: sans-serif;
@@ -127,7 +136,6 @@ body {
 
 .task_container{
 	margin-top: 15px;
-	/*background: blue;*/
 	display: block;
 	width: 100%;
 	height: 380px;
@@ -145,51 +153,69 @@ body {
 	background: var(--primary);
 	color: white;
 	text-align: center;
-
+	text-transform: capitalize;
 	padding: 10px;
-	/*width: 100%;
-	height: 40px;*/
 	padding-top: 16px;
 	border-radius:15px;
 }
 .task_item1>span{
 	display: inline-block;
-	 font-size: 10px;
+	font-size: 10px;
 	padding: 10px;
 }
 .task_item2{
 	display: block;
-	/*background: cyan;*/
 	padding: 10px;
 	margin-right:  10px;
 	border-radius:15px;
 	font-weight: bolder;
+    text-transform: capitalize;
 }
+
 .task_item2>span{
 	display: block;
-	/*background: cyan;*/
 	font-size: 12px;
-
 }
+
 .task_item3{
+	text-transform: capitalize;
 	display: block;
 	background: var(--enable);
 	padding: 10px;
 	border-radius:10px;
 }
-
-.task_item4{
-	display: block;
+.task_option{
+	display: flex;
+	/*background: blue;*/
+	align-items: center;
+	/*justify-content: center;*/
+		
+}
+.task_option_menu,
+.task_option_del,
+.task_option_edit{
+	display: inline-block;
+	background: var(--primary);
+	color: white;
+	padding: 5px;
+	margin: 5px;
+	border-radius:110px;
+	transition: 3s;
+}
+.task_option_menu:hover,
+.task_option_del:hover,
+.task_option_edit:hover{
+	cursor: pointer;
 	background: var(--secon);
-	padding: 10px;
-	border-radius:10px;
+	box-shadow: 1px 1px 6px rgba(0,0,.2);
 }
 
-
-.from{
-	
+.task_option_del,
+.task_option_edit{
+	display: none;
+}
+.from{	
 	position: absolute;
-	/* background: #1abc9c;   */
 	display: flex;
 	width: 320px;
 	height: 170px; 
@@ -216,8 +242,7 @@ body {
 }
 
 .input_translate_fin{
-	/* transform: translateX(-250px);  */
-transform: translateX(0px);
+	transform: translateX(0px);
 }
 
 .btn_{
@@ -232,7 +257,6 @@ transform: translateX(0px);
 	font-size: 22px;
 	color: white;
 	transition: 2s;
-	/* margin: 5px; */
 	margin-top: 90px;
 	margin-left: 120px;
 	z-index: 999;
@@ -247,5 +271,6 @@ transform: translateX(0px);
 .btn_translate{
 	transform: translateX(380px);	
 }
+
 
 
