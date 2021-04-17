@@ -6,6 +6,7 @@ ul {list-style-type: none;}
 	--primary:#394cfe; 
 	--secon:#fa0496;
 	--enable:#f3f3f3;
+	--text:#515151;
 }
 body {
 	margin: 0;
@@ -26,7 +27,9 @@ body {
 	background: var(--conten);
 	border-radius:5%;
 	padding: 20px;
-	box-shadow: .1px .2px 3px rgba(0,0,.2);
+	box-shadow: 
+    12px 12px 8px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 6px 0 rgba(255, 255, 255, 0.3);
 
 }
 /* Month header */
@@ -45,7 +48,7 @@ body {
 }
 
 .month ul li {
-	font-family: sans-serif;
+  font-family: sans-serif;
   color: var(--primary);
   font-size: 28px;
   text-transform: uppercase;
@@ -71,21 +74,19 @@ body {
 .weekdays {
   margin: 0;
   padding: 10px 0;
-  /*background-color:#ddd;*/
 }
 
 .weekdays li {
   display: inline-block;
   margin: 10px;
   padding: 5px;
-  /*color: #666;*/
+  color: var(--text);
   text-align: center;
 }
 
 /* Days (1-31) */
 .days {
   padding: 10px 0;
-  /*background: #eee;*/
   margin: 0;
 }
 
@@ -96,11 +97,9 @@ body {
   height: 6px;
   margin: 15px;
   padding: 8px;
-  
   text-align: center;
- /* margin-bottom: 5px;*/
   font-size:12px;
-  color: #777;
+   color: var(--text);
 }
 
 /* Highlight the "current" day */
@@ -114,7 +113,9 @@ body {
   
 }
 .active:hover{
-	box-shadow: 1px 0 6px rgba(0,0,.2);
+	box-shadow: 
+    12px 12px 8px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 6px 0 rgba(255, 255, 255, 0.3);
 }
 .active_fech {
   padding: 5px;
@@ -123,7 +124,9 @@ body {
   border-radius:50%;
   cursor: pointer;
   transition: 2s;
-  
+  box-shadow: 
+    12px 12px 8px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 6px 0 rgba(255, 255, 255, 0.3);
 }
 
 .task_title{
@@ -132,6 +135,7 @@ body {
 	font-size: 30px;
 	text-align: center;
 	font-weight: bolder;
+	 color: var(--text);
 }
 
 .task_container{
@@ -157,6 +161,9 @@ body {
 	padding: 10px;
 	padding-top: 16px;
 	border-radius:15px;
+	box-shadow: 
+    12px 12px 8px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 6px 0 rgba(255, 255, 255, 0.3);
 }
 .task_item1>span{
 	display: inline-block;
@@ -170,6 +177,7 @@ body {
 	border-radius:15px;
 	font-weight: bolder;
     text-transform: capitalize;
+
 }
 
 .task_item2>span{
@@ -180,6 +188,7 @@ body {
 .task_item3{
 	text-transform: capitalize;
 	display: block;
+	 color: var(--text);
 	background: var(--enable);
 	padding: 10px;
 	border-radius:10px;
@@ -195,25 +204,38 @@ body {
 .task_option_del,
 .task_option_edit{
 	display: inline-block;
-	background: var(--primary);
-	color: white;
+	background: var(--enable);
+	margin: 2px;
 	padding: 5px;
-	margin: 5px;
-	border-radius:110px;
-	transition: 3s;
+  	border-radius:50%;
+	transition: 1s;
+
 }
+
 .task_option_menu:hover,
 .task_option_del:hover,
 .task_option_edit:hover{
 	cursor: pointer;
+	color: white;
 	background: var(--secon);
-	box-shadow: 1px 1px 6px rgba(0,0,.2);
+	box-shadow: 
+    12px 12px 8px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 6px 0 rgba(255, 255, 255, 0.3);
+}
+
+.task_option_menu > i,
+.task_option_del > i,
+.task_option_edit > i{
+	
+	 margin: 5px;
 }
 
 .task_option_del,
 .task_option_edit{
 	display: none;
+	transition: 2s;
 }
+
 .from{	
 	position: absolute;
 	display: flex;
@@ -235,6 +257,17 @@ body {
 	border-radius: 15px;
 	margin-top: 95px;
 	transition: 2s;
+	/* box-shadow: 
+    12px 12px 8px 0 rgba(255, 255, 255, 0.3) inset,
+    -8px -8px 6px 0 rgba(0, 0, 0, .25) inset;*/
+	/*transition: width 0.4s ease-in-out;*/
+}
+.from_task_note:focus ,.from_task:focus {
+  /* width: 100%;*/
+  border:2px solid #f3f3f3;
+ box-shadow: 
+    12px 12px 8px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 6px 0 rgba(255, 255, 255, 0.3);
 }
 
 .input_translate_initial{
@@ -260,17 +293,20 @@ body {
 	margin-top: 90px;
 	margin-left: 120px;
 	z-index: 999;
+
+	
 }
 
 .btn_:hover{
 	cursor: pointer;
 	background: var(--secon);
-	box-shadow: 1px 1px 6px rgba(0,0,.2);
+	box-shadow: 
+    12px 12px 8px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 6px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn_translate{
 	transform: translateX(380px);	
 }
-
 
 
