@@ -3,25 +3,26 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<title></title>
 </head>
 <body>
 <div class="container">
 	<div class="month">
   <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>August<br><span style="font-size:18px">2021</span></li>
+    <!-- <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li> -->
+    <li>Agosto<br><span style="font-size:18px">2021</span></li>
   </ul>
 </div>
 
 <ul class="weekdays">
- <li>Su</li>
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
-  <li>Fr</li>
+  <li style="color:#fa0496">Do</li>
+  <li>Lu</li>
+  <li>Ma</li>
+  <li>Mi</li>
+  <li>Ju</li>
+  <li>Vi</li>
   <li>Sa</li>
 </ul>
 
@@ -31,42 +32,18 @@
 </div>
 
 <div class="container">
-	<div class="task_title">TASK FOR TODAY</div>
-	<div class="task_container">
-		<!-- <div class="task">
-			<div class="task_item1">Lorem ipsum dolor sit amet <span>9:30am</span></div>
-			<div class="task_item2">2 <span>mon</span></div>
-		</div>
-		<div class="task">
-			<div class="task_item3">Lorem ipsum dolor sit amet</div>
-		</div>
 
-		<div class="task">
-			<div class="task_item1">Lorem ipsum dolor sit amet <span>9:30am</span></div>
-			<div class="task_item2">2 <span>mon</span></div>
-		</div>
-
-		<div class="task">
-			<div class="task_item4">Lorem ipsum dolor sit amet</div>
-		</div>
-
-<div class="task">
-			<div class="task_item1">Lorem ipsum dolor sit amet <span>9:30am</span></div>
-			<div class="task_item2">2 <span>mon</span></div>
-		</div>
-<div class="task">
-			<div class="task_item3">Lorem ipsum dolor sit amet</div>
-		</div> -->
-
-
-</div>
+	<div class="task_title">TAREA DE HOY</div>
+	<div class="task_container" id="task_con">
+		
+	</div>
 
 </div>
 
 <div class="from">
-	<input type="text" name="" class="from_task input_translate_initial" id="task" onkeypress="pulsar_task(event)" placeholder="Ingresa task">
-	<input type="text" name="" id="note" onkeypress="pulsar_note(event)" class="from_task_note input_translate_initial" placeholder="Ingresa note">
+	<input type="text" name="" class="from_task input_translate_initial" id="task" onkeypress="pulsar_task(event)" placeholder="Ingresa nueva tarea">
 
+	<input type="text" name="" id="note" onkeypress="pulsar_note(event)" class="from_task_note input_translate_initial" placeholder="Ingresa alguna nota">
 
 	<div class="btn_ btn_task">
 	<i class="task_ fas fa-tasks" ></i>
@@ -77,7 +54,11 @@ http://ichi.pro/es/9-ideas-de-proyectos-para-desarrolladores-de-javascript-princ
 
 http://www.falconmasters.com/javascript/app-lista-tareas-javascript/
  -->
+<!-- 
+https://css-tricks.com/neumorphism-and-css/
 
+https://www.digitalocean.com/community/tutorials/como-modificar-atributos-clases-y-estilos-en-el-dom-es
+ -->
  <script src="main.js"></script>
 </body>
 </html>
